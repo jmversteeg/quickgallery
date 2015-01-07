@@ -1,9 +1,12 @@
 <?php
-
 /*
- * Plugin Name: Quickgallery
- * Version: 0.0.1
- */
+Plugin Name:    Quickgallery
+Plugin URI:     https://github.com/jmversteeg/quickgallery
+Description:    The WordPress gallery that just works
+Version:        0.0.2
+Author:         jmversteeg
+Author URI:     https://github.com/jmversteeg
+*/
 
 class QG
 {
