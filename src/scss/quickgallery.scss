@@ -1,0 +1,19 @@
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+$qgmargin: 5px;
+
+.quickgallery {
+    @include clearfix;
+    margin: 0 (-$qgmargin);
+    .qgcol {
+        box-sizing: border-box;
+        padding: 0 $qgmargin;
+        float: left;
+    }
+    figure {
+        margin-bottom: $qgmargin * 2;
+        a img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "quickgallery",
+  "dependencies": {
+    "photoswipe": "~4.0.3",
+    "bourbon": "~4.1.0",
+    "underscore": "~1.7.0"
+  }
+}
