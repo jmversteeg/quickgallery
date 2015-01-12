@@ -13,7 +13,7 @@
 
 ```
 cd web/app/mu-plugins
-git clone https://github.com/jmversteeg/quickgallery/edit/master/README.md quickgallery
+git clone https://github.com/jmversteeg/quickgallery.git quickgallery
 npm install
 bower install
 grunt build
