@@ -1,4 +1,5 @@
 <?php
+
 /*
 Plugin Name:    Quickgallery
 Plugin URI:     https://github.com/jmversteeg/quickgallery
@@ -270,11 +271,9 @@ add_shortcode('quickgallery', function ($args, $content, $tag) {
 });
 
 add_action('wp_enqueue_scripts', function () {
-    wp_register_script('underscore', plugins_url('bower_components/underscore/underscore-min.js'));
+    wp_register_script('underscore', plugins_url('dist/js/lib/underscore/underscore-min.js'));
     wp_enqueue_script('quickgallery', plugins_url('dist/js/quickgallery.js', __FILE__), array('jquery', 'underscore'), false, true);
-    wp_enqueue_style('photoswipe', plugins_url('bower_components/photoswipe/dist/photoswipe.css', __FILE__));
-    wp_enqueue_style('photoswipe-default-skin', plugins_url('bower_components/photoswipe/dist/default-skin/default-skin.css', __FILE__));
-    wp_enqueue_style('quickgallery', plugins_url('dist/css/quickgallery.css', __FILE__));
+    wp_enqueue_style('quickgallery', plugins_url('dist/css/qg.css', __FILE__));
 });
 
 add_action('wp_footer', function () {
