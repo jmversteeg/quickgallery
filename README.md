@@ -14,6 +14,7 @@
 ```
 cd web/app/mu-plugins
 git clone https://github.com/jmversteeg/quickgallery.git quickgallery
+cd quickgallery
 npm install
 bower install
 grunt build
