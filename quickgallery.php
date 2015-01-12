@@ -134,10 +134,37 @@ class QGView
         if (preg_match_all(self::PATT_MATCH_CONTENT, $content, $matches, PREG_SET_ORDER) !== false)
             foreach ($matches as $match) {
                 // TODO improve performance on figuring out the sizes
-                $sizes  = getimagesize(WP_CONTENT_DIR . str_replace(content_url(), '', $match[1]));
-                $pics[] = new QGPic($match[2], $match[1], $sizes[0], $sizes[1], '', '');
+                $imageUrl = $match[1];
+                $sizes    = getimagesize(self::getPathByUrl($imageUrl));
+                $pics[]   = new QGPic($match[2], $match[1], $sizes[0], $sizes[1], '', '');
             }
         return $pics;
+    }
+
+    /**
+     * Resolves URL to a path accessible through the local file system
+     *
+     * @param $imageUrl
+     *
+     * @return string
+     */
+    private static function getPathByUrl ($imageUrl)
+    {
+        $contentUrl = content_url();
+        if (strpos($imageUrl, '/') === 0)
+            $imageUrl = self::getRootUrl() . $imageUrl;
+        return WP_CONTENT_DIR . str_replace($contentUrl, '', $imageUrl);
+    }
+
+    /**
+     * @return string
+     */
+    private static function getRootUrl ()
+    {
+        if (defined('WP_HOME_ROOT'))
+            return WP_HOME_ROOT;
+        else
+            return home_url();
     }
 
     /**
