@@ -1,2 +1,20 @@
 # quickgallery
-*The WordPress gallery that just works*
+*The smart, responsive WordPress gallery that just works*
+
+### Sounds amazing! How the hell does it work?
+
+1. Insert thumbnails using the built-in editor
+2. Surround said thumbnails with `[quickgallery]` and `[/quickgallery]`
+3. That's actually it
+4. Holy shit that's fucking cool
+5. I know
+
+### Installation
+
+```
+cd web/app/mu-plugins
+git clone https://github.com/jmversteeg/quickgallery/edit/master/README.md quickgallery
+npm install
+bower install
+grunt build
+```
