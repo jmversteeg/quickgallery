@@ -184,7 +184,7 @@
 
     var preferedColWidth = 180;
 
-    var redoLayout = function (element) {
+    var redoLayout = function (element, forceRealign) {
 
         var $wrapper = $(element);
 
@@ -192,7 +192,7 @@
         var currentColNum = $wrapper.find('.qgcol').length;
         var optimalColNum = Math.max(1, Math.round(wrapperWidth / preferedColWidth));
 
-        if (!$wrapper.data('layoutDone') || currentColNum != optimalColNum) {
+        if (!$wrapper.data('layoutDone') || currentColNum != optimalColNum || forceRealign) {
             var $figures = $wrapper.find('figure').detach();
             $wrapper.empty();
             var cols = [];
@@ -231,19 +231,24 @@
 
     var resizeTimeout = null;
 
-    function redoAllLayouts() {
+    function redoAllLayouts(forceRealign) {
         resizeTimeout = null;
         $galleries.each(function () {
-            redoLayout(this);
+            redoLayout(this, forceRealign);
         })
     }
 
     $(function () {
-        redoAllLayouts();
+        redoAllLayouts(false);
+        window.setTimeout(function () {
+            redoAllLayouts(true);
+        }, 100);
         $(window).resize(function () {
             if (resizeTimeout != null)
                 window.clearTimeout(resizeTimeout);
-            resizeTimeout = window.setTimeout(redoAllLayouts, 30);
+            resizeTimeout = window.setTimeout(function () {
+                redoAllLayouts(false);
+            }, 30);
         });
     });
 
