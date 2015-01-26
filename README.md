@@ -13,7 +13,7 @@
 
 ```
 cd web/app/mu-plugins
-git clone https://github.com/jmversteeg/quickgallery.git quickgallery
+git clone https://github.com/jmversteeg/quickgallery.git
 cd quickgallery
 npm install
 bower install
