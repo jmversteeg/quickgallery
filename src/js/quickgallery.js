@@ -149,7 +149,7 @@
 
                 getThumbBoundsFn: function (index) {
                     // See Options -> getThumbBoundsFn section of documentation for more info
-                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                    var thumbnail = items[index].el.getElementsByTagName('div')[0], // find thumbnail
                         pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
                         rect = thumbnail.getBoundingClientRect();
 
@@ -188,6 +188,7 @@
 
         var $wrapper = $(element);
 
+        var meanAspectRatio = $wrapper.data('mean-aspectratio');
         var wrapperWidth = $wrapper.width();
         var currentColNum = $wrapper.find('.qgcol').length;
         var optimalColNum = Math.max(1, Math.round(wrapperWidth / preferedColWidth));
@@ -209,10 +210,13 @@
             }
             _.each($figures, function (figure) {
                 var $figure = $(figure);
+                $figure.css('height', 'auto');
+                var aspectRatio = $figure.data('aspectratio');
                 var $lowestCol = $(_.min(cols, function (col) {
                     return $(col).height()
                 }));
                 $lowestCol.append($figure);
+                $figure.height(Math.floor($figure.width() / (meanAspectRatio > 0 ? meanAspectRatio : aspectRatio)));
             });
             cols = _.sortBy(cols, function (col) {
                 return -$(col).height();

@@ -1,4 +1,5 @@
-<div class="quickgallery" itemscope itemtype="http://schema.org/ImageGallery">
+<div class="quickgallery" data-mean-aspectratio="<?php echo QG::getCurrentView()->getMeanAspectRatio(); ?>" itemscope
+     itemtype="http://schema.org/ImageGallery">
 
     <?php
 

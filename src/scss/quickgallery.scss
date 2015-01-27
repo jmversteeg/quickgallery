@@ -12,9 +12,19 @@ $qgmargin: 5px;
     }
     figure {
         margin-bottom: $qgmargin * 2;
-        a img {
+        position: relative;
+        a {
+            position: absolute;
             width: 100%;
+            height:   100%;
             display: block;
+            div {
+                position:            absolute;
+                width:               100%;
+                height:              100%;
+                background-size:     cover;
+                background-position: center;
+            }
         }
     }
 }
