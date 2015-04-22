@@ -98,11 +98,11 @@ class QGView
 
     private $meanAspectRatio = null;
 
-    const ARG_TITLE          = 'title';
-    const ARG_DESCRIPTION    = 'description';
-    const ARG_CROP_IMAGES        = 'crop_images';
+    const ARG_TITLE       = 'title';
+    const ARG_DESCRIPTION = 'description';
+    const ARG_CROP_IMAGES = 'crop_images';
 
-    const PATT_MATCH_CONTENT = "/<a[^>]*?href=(?:'|\")(.*?)(?:'|\")[^>]*?><img[^>]*?src=(?:'|\")(.*?)(?:'|\")[^>]*?>.*?<\\/a>/";
+    const PATT_MATCH_CONTENT     = "/<a[^>]*?href=(?:'|\")(.*?)(?:'|\")[^>]*?><img[^>]*?src=(?:'|\")(.*?)(?:'|\")[^>]*?>.*?<\\/a>/";
     const PATT_MATCH_ASPECTRATIO = "/(\\d+)x(\\d+)/";
 
     /**
