@@ -223,9 +223,12 @@ class QGView
     private static function getPathByUrl ($imageUrl)
     {
         $contentUrl = content_url();
+        if (strpos($contentUrl, '.app/') !== false)
+            $contentUrl = array($contentUrl, str_replace('.app/', '.nl/', $contentUrl));
         if (strpos($imageUrl, '/') === 0)
             $imageUrl = self::getRootUrl() . $imageUrl;
-        return WP_CONTENT_DIR . str_replace($contentUrl, '', $imageUrl);
+        $relativeUrl = str_replace($contentUrl, '', $imageUrl);
+        return WP_CONTENT_DIR . $relativeUrl;
     }
 
     /**
