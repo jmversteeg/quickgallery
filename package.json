@@ -1,5 +1,6 @@
 {
   "name": "quickgallery",
+  "private": true,
   "devDependencies": {
     "bower": "^1.3.12",
     "grunt": "^0.4.5",

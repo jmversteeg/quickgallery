@@ -1,0 +1,17 @@
+{
+  "name":        "jmversteeg/quickgallery",
+  "version":     "0.0.1",
+  "description": "The smart, responsive WordPress gallery that just works",
+  "license":     "MIT",
+  "authors":     [
+    {
+      "name":     "jmversteeg",
+      "email":    "janmerijnversteeg@gmail.com",
+      "homepage": "https://github.com/jmversteeg"
+    }
+  ],
+  "type":        "wordpress-muplugin",
+  "require":     {
+    "composer/installers": "~1.0"
+  }
+}
