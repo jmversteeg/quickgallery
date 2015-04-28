@@ -23,10 +23,10 @@
   },
 ```
 
-Then ship your build with katapult, or:
+Then ship your build with (katapult)[https://github.com/jmversteeg/katapult], or:
 
 ```bash
-cd quickgallery
+cd web/app/mu-plugins/quickgallery
 npm install
 grunt build
 ```
