@@ -8,5 +8,10 @@
     "grunt-contrib-sass": "^0.8.1",
     "load-grunt-tasks": "^2.0.0",
     "time-grunt": "^1.0.0"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.2",
+    "photoswipe": "^4.0.7",
+    "underscore": "^1.8.3"
   }
 }

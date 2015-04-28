@@ -8,16 +8,16 @@ module.exports = function (grunt) {
         concat: {
             js:  {
                 src:  [
-                    'bower_components/photoswipe/dist/photoswipe.min.js',
-                    'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
+                    'node_modules/photoswipe/dist/photoswipe.min.js',
+                    'node_modules/photoswipe/dist/photoswipe-ui-default.min.js',
                     'src/js/quickgallery.js'
                 ],
                 dest: 'dist/js/quickgallery.js'
             },
             css: {
                 src:  [
-                    'bower_components/photoswipe/dist/photoswipe.css',
-                    'bower_components/photoswipe/dist/default-skin/default-skin.css',
+                    'node_modules/photoswipe/dist/photoswipe.css',
+                    'node_modules/photoswipe/dist/default-skin/default-skin.css',
                     'dist/css/quickgallery.css'
                 ],
                 dest: 'dist/css/qg.css'
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd:    'bower_components/photoswipe/dist/default-skin/',
+                        cwd:    'node_modules/photoswipe/dist/default-skin/',
                         src:    ['*'],
                         dest:   'dist/css/'
                     }
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd:    'bower_components/underscore',
+                        cwd:    'node_modules/underscore',
                         src:    ['*.js', '*.map'],
                         dest:   'dist/js/lib/underscore'
                     }
