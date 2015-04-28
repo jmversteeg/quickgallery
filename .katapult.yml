@@ -1,0 +1,10 @@
+install:
+ - npm install
+
+build:
+ - grunt build
+
+purge:
+ - "!dist"
+ - "!templates"
+ - "!quickgallery.php"
