@@ -11,9 +11,21 @@
 
 ### Installation
 
+```json
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/jmversteeg/quickgallery.git"
+    }
+  ],
+  "require": {
+    "jmversteeg/quickgallery": "dev-master"
+  },
 ```
-cd web/app/mu-plugins
-git clone https://github.com/jmversteeg/quickgallery.git
+
+Then ship your build with katapult, or:
+
+```bash
 cd quickgallery
 npm install
 grunt build
