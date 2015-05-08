@@ -1,5 +1,5 @@
 # quickgallery
-[![Ships with Katapult](https://img.shields.io/badge/ships_with-katapult-orange.svg?style=flat-square)](https://github.com/jmversteeg/katapult)
+[![Deploys with Katapult](https://img.shields.io/badge/deploys_with-katapult-orange.svg?style=flat-square)](https://github.com/jmversteeg/katapult)
 
 *The smart, responsive WordPress gallery that just works*
 
