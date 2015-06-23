@@ -218,9 +218,9 @@
                 $lowestCol.append($figure);
                 $figure.height(Math.floor($figure.width() / (meanAspectRatio > 0 ? meanAspectRatio : aspectRatio)));
             });
-            cols = _.sortBy(cols, function (col) {
-                return -$(col).height();
-            });
+            //cols = _.sortBy(cols, function (col) {
+            //    return -$(col).height();
+            //});
             _.each(cols, function (col) {
                 $(col).detach().appendTo($wrapper);
             });
