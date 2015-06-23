@@ -243,7 +243,7 @@
     }
 
     $(function () {
-        redoAllLayouts(false);
+        //redoAllLayouts(false);
         window.setTimeout(function () {
             redoAllLayouts(true);
         }, 100);
