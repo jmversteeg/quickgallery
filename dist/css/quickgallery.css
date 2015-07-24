@@ -1,0 +1,26 @@
+.quickgallery {
+  margin: 0 -15px; }
+  .quickgallery::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .quickgallery .qgcol {
+    box-sizing: border-box;
+    padding: 0 15px;
+    float: left; }
+  .quickgallery figure {
+    margin-bottom: 30px;
+    position: relative; }
+    .quickgallery figure a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block; }
+      .quickgallery figure a div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center; }
+
+/*# sourceMappingURL=quickgallery.css.map */
