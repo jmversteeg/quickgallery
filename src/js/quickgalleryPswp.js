@@ -6,8 +6,8 @@
         // (children of gallerySelector)
         var parseThumbnailElements = function (el) {
             var thumbElements = el.querySelectorAll("figure"),
-                numNodes = thumbElements.length,
-                items = [],
+                numNodes      = thumbElements.length,
+                items         = [],
                 figureEl,
                 linkEl,
                 size,
@@ -75,9 +75,9 @@
             // find index of clicked item by looping through all child nodes
             // alternatively, you may define index via data- attribute
             var clickedGallery = clickedListItem.parentNode.parentNode,
-                childNodes = clickedListItem.parentNode.parentNode.querySelectorAll("figure"),
-                numChildNodes = childNodes.length,
-                nodeIndex = 0,
+                childNodes     = clickedListItem.parentNode.parentNode.querySelectorAll("figure"),
+                numChildNodes  = childNodes.length,
+                nodeIndex      = 0,
                 index;
 
             for (var i = 0; i < numChildNodes; i++) {
@@ -102,7 +102,7 @@
 
         // parse picture index and gallery index from URL (#&pid=1&gid=2)
         var photoswipeParseHash = function () {
-            var hash = window.location.hash.substring(1),
+            var hash   = window.location.hash.substring(1),
                 params = {};
 
             if (hash.length < 5) {
@@ -142,16 +142,16 @@
 
             // define options (if needed)
             options = {
-                index:      index,
+                index: index,
 
                 // define gallery index (for URL)
                 galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
                 getThumbBoundsFn: function (index) {
                     // See Options -> getThumbBoundsFn section of documentation for more info
-                    var thumbnail = items[index].el.getElementsByTagName('div')[0], // find thumbnail
+                    var thumbnail   = items[index].el.getElementsByTagName('div')[0], // find thumbnail
                         pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                        rect = thumbnail.getBoundingClientRect();
+                        rect        = thumbnail.getBoundingClientRect();
 
                     return {x: rect.left, y: rect.top + pageYScroll, w: rect.width};
                 }
@@ -184,10 +184,13 @@
 
     var preferedColWidth = 180;
 
+    /**
+     * Redoes the layout of the gallery contained inside the wrapper element
+     * @param {HTMLElement} element
+     * @param {boolean} forceRealign
+     */
     var redoLayout = function (element, forceRealign) {
-
         var $wrapper = $(element);
-
         var meanAspectRatio = $wrapper.data('mean-aspectratio');
         var wrapperWidth = $wrapper.width();
         var currentColNum = $wrapper.find('.qgcol').length;
@@ -235,6 +238,10 @@
 
     var resizeTimeout = null;
 
+    /**
+     * Redo all layouts
+     * @param {boolean} forceRealign
+     */
     function redoAllLayouts(forceRealign) {
         resizeTimeout = null;
         $galleries.each(function () {

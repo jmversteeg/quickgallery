@@ -9,6 +9,8 @@ Author:         jmversteeg
 Author URI:     https://github.com/jmversteeg
 */
 
+require __DIR__ . '/inc/nativeGalleryHelper.php';
+
 class QG
 {
 

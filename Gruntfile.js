@@ -10,7 +10,8 @@ module.exports = function (grunt) {
                 src:  [
                     'node_modules/photoswipe/dist/photoswipe.min.js',
                     'node_modules/photoswipe/dist/photoswipe-ui-default.min.js',
-                    'src/js/quickgallery.js'
+                    'src/js/quickgalleryPswp.js',
+                    'src/js/nativeGalleryPswp.js'
                 ],
                 dest: 'dist/js/quickgallery.js'
             },
